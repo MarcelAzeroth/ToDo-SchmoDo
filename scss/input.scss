@@ -3,8 +3,8 @@
 
 :root {
     --bg-color: #F2F2F2;
-    --bg-img: url("/images/bg-mobile-light.jpg");
-    --bg-img-desk: url("/images/bg-desktop-light.jpg");
+    --bg-img: url("../images/bg-mobile-light.jpg");
+    --bg-img-desk: url("../images/bg-desktop-light.jpg");
     --font-color: #9495A5;
     --font-done: #D1D2DA;
     --bg-list: #FFF;
@@ -14,8 +14,8 @@
 
 body[theme="dark"] {
     --bg-color: #161625;
-    --bg-img: url("/images/bg-mobile-dark.jpg");
-    --bg-img-desk: url("/images/bg-desktop-dark.jpg");
+    --bg-img: url("../images/bg-mobile-dark.jpg");
+    --bg-img-desk: url("../images/bg-desktop-dark.jpg");
     --font-color: #767992;
     --font-done: #4D5067;
     --bg-list: #25273D;
