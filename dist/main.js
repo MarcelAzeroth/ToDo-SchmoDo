@@ -16,10 +16,10 @@ const addToDo = event => {
         <li class="todo__main-list-item">
             <label class="todo__main-list-item-checkbox">
                 <input type="checkbox">
-                <span class="checkmark"><img src="/images/icon-check.svg" alt=""></span>
+                <span class="checkmark"><img src="./images/icon-check.svg" alt=""></span>
                 <p id="list-paragraph">${item}</p>
             </label>
-            <img src="/images/icon-cross.svg" alt="" class="todo__main-list-item-delete">
+            <img src="./images/icon-cross.svg" alt="" class="todo__main-list-item-delete">
         </li>`
 
         //clear Input 
@@ -132,17 +132,17 @@ const bodyElem = document.querySelector("body")
 const switchTheme = () => {
     let checkmarks = document.querySelectorAll(".checkmark img")
 
-    if(switchBtn.getAttribute("src") === "/images/icon-moon.svg"){
-        switchBtn.setAttribute("src", "/images/icon-sun.svg")
+    if(switchBtn.getAttribute("src") === "./images/icon-moon.svg"){
+        switchBtn.setAttribute("src", "./images/icon-sun.svg")
         bodyElem.setAttribute("theme", "dark")
         checkmarks.forEach(checkmark => {
-            checkmark.setAttribute("src", "/images/icon-check-dark.svg")
+            checkmark.setAttribute("src", "./images/icon-check-dark.svg")
         })
     } else {
-        switchBtn.setAttribute("src", "/images/icon-moon.svg")
+        switchBtn.setAttribute("src", "./images/icon-moon.svg")
         bodyElem.removeAttribute("theme")
         checkmarks.forEach(checkmark => {
-            checkmark.setAttribute("src", "/images/icon-check.svg")
+            checkmark.setAttribute("src", "./images/icon-check.svg")
         })
     }
 }
