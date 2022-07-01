@@ -26,8 +26,8 @@ ul {
 
 body[theme=dark] {
   --bg-color: #161625;
-  --bg-img: url("/images/bg-mobile-dark.jpg");
-  --bg-img-desk: url("/images/bg-desktop-dark.jpg");
+  --bg-img: url("../images/bg-mobile-dark.jpg");
+  --bg-img-desk: url("../images/bg-desktop-dark.jpg");
   --font-color: #767992;
   --font-done: #4D5067;
   --bg-list: #25273D;
