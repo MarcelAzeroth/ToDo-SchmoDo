@@ -1,0 +1,8 @@
+$break: 768px;
+
+
+@mixin break {
+  @media (min-width: #{$break}) {
+    @content;
+  }
+}

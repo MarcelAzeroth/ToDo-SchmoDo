@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>ToDo</title>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="container">
+        <header class="todo__header">
+            <h1 class="todo__header-headline">
+                ToDo
+            </h1>
+            <img class="todo__header-switch" src="/images/icon-moon.svg"></img>
+        </header>
+    
+        <main class="todo__main">
+
+            <div class="form">
+                <input type="text" class="todo__main-input" placeholder="Create a new todo...">
+                <span class="todo__main-input-circle"></span>
+            </div>
+
+
+            <ul class="todo__main-list">
+                <li class="todo__main-list-item">
+                    <label class="todo__main-list-item-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <img src="/images/icon-check.svg" alt=""></span>
+                        <p id="list-paragraph">Item 1</p>
+                    </label>
+                    <img src="/images/icon-cross.svg" alt="" class="todo__main-list-item-delete">
+                </li>
+                <li class="todo__main-list-item">
+                    <label class="todo__main-list-item-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"><img src="/images/icon-check.svg" alt=""></span>
+                        <p id="list-paragraph"> Item Done</p>
+                    </label>
+                    <img src="/images/icon-cross.svg" alt="" class="todo__main-list-item-delete">
+                </li>
+            </ul>
+
+            <div class="todo__main-last">
+                <p><span class="last-number">0</span> items</p>
+                <p id="clear-completed">Clear Completed</p>
+            </div>
+
+            <div class="overview">
+                <p class="all overview-active">All</p>
+                <p class="active">Active</p>
+                <p class="completed">Completed</p>
+            </div>
+
+        </main>
+
+        <footer>
+            <p class="footer">Coming soon: Drag and drop to reorder list</p>
+        </footer>
+
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+$gray-vl: hsl(0, 0%, 98%);
+$gray-blue-vl: hsl(236, 33%, 92%);
+$gray-blue-l: hsl(0, 0%, 98%);
+$gray-l: hsl(233, 11%, 84%);
+$gray-blue-vd: hsl(235, 19%, 35%);
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}

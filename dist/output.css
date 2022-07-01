@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+:root {
+  --bg-color: #F2F2F2;
+  --bg-img: url("/images/bg-mobile-light.jpg");
+  --bg-img-desk: url("/images/bg-desktop-light.jpg");
+  --font-color: #9495A5;
+  --font-done: #D1D2DA;
+  --bg-list: #FFF;
+  --list-border: #E3E4F1;
+  --box-shadow: rgba(194, 195, 214, 0.5);
+}
+
+body[theme=dark] {
+  --bg-color: #161625;
+  --bg-img: url("/images/bg-mobile-dark.jpg");
+  --bg-img-desk: url("/images/bg-desktop-dark.jpg");
+  --font-color: #767992;
+  --font-done: #4D5067;
+  --bg-list: #25273D;
+  --list-border: #393A4B;
+  --box-shadow: rgba(194, 195, 214, 0);
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.bg {
+  height: 200px;
+  background-image: var(--bg-img);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .bg {
+    background-image: var(--bg-img-desk);
+  }
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  padding: 2.6rem 1.3rem;
+  max-width: 540px;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.todo__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+.todo__header-headline {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1rem;
+}
+.todo__header-switch {
+  width: 20px;
+  height: 20px;
+}
+.todo__header-switch:hover {
+  cursor: pointer;
+}
+
+.todo__main {
+  position: relative;
+  width: 100%;
+}
+.todo__main-input {
+  width: 100%;
+  padding: 1rem 3rem;
+  border-style: none;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  color: var(--font-color);
+  background-color: var(--bg-list);
+}
+.todo__main-input:focus {
+  outline: none;
+}
+.todo__main-input-circle {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  transform: translateY(70%);
+  border: 1px solid var(--list-border);
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+.todo__main-list {
+  background-color: var(--bg-list);
+  border-radius: 5px;
+  box-shadow: 0px 35px 50px -15px var(--box-shadow);
+}
+.todo__main-list-item {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  letter-spacing: -0.17px;
+  font-weight: 400;
+  padding: 1rem 1.3rem;
+  border-bottom: 1px solid var(--list-border);
+  color: var(--font-color);
+}
+.todo__main-list-item-checkbox {
+  position: relative;
+  width: 80%;
+}
+.todo__main-list-item-checkbox p {
+  font-size: 12px;
+  letter-spacing: -0.17px;
+  line-height: 12px;
+  position: absolute;
+  display: block;
+  left: 30px;
+  top: -8px;
+}
+.todo__main-list-item-checkbox input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.todo__main-list-item-checkbox .checkmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--list-border);
+}
+.todo__main-list-item-checkbox .checkmark img {
+  height: 7.5px;
+  width: 7.5px;
+}
+.todo__main-list-item-checkbox:hover {
+  cursor: pointer;
+}
+.todo__main-list-item-delete {
+  height: 12px;
+  width: 12px;
+  margin-left: auto;
+}
+.todo__main-list-item-delete:hover {
+  cursor: pointer;
+}
+
+.todo__main-last {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--list-border);
+  border: none;
+  background-color: var(--bg-list);
+  padding: 1rem 1.3rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-bottom: 1rem;
+  box-shadow: 0px 35px 50px -15px var(--box-shadow);
+}
+.todo__main-last p:last-child:hover {
+  cursor: pointer;
+}
+
+.overview {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--font-color);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--bg-list);
+  border-radius: 5px;
+  padding: 0.75rem 1.3rem;
+  margin-bottom: 2rem;
+  box-shadow: 0px 35px 50px -15px var(--box-shadow);
+}
+.overview .overview-active {
+  color: #3A7CFD;
+}
+.overview p:hover {
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .overview {
+    position: absolute;
+    background-color: transparent;
+    bottom: 0;
+    left: 150px;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.footer {
+  font-size: 0.75rem;
+  color: var(--list-border);
+  text-align: center;
+}
+
+.done {
+  color: var(--font-done);
+  text-decoration: line-through;
+}
+
+.checkmark-done {
+  background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+}
+
+.none {
+  display: none;
+}
+
+/*# sourceMappingURL=output.css.map */
