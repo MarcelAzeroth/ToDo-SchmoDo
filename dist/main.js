@@ -132,17 +132,17 @@ const bodyElem = document.querySelector("body")
 const switchTheme = () => {
     let checkmarks = document.querySelectorAll(".checkmark img")
 
-    if(switchBtn.getAttribute("src") === "../images/icon-moon.svg"){
-        switchBtn.setAttribute("src", "../images/icon-sun.svg")
+    if(switchBtn.getAttribute("src") === "/images/icon-moon.svg"){
+        switchBtn.setAttribute("src", "/images/icon-sun.svg")
         bodyElem.setAttribute("theme", "dark")
         checkmarks.forEach(checkmark => {
-            checkmark.setAttribute("src", "../images/icon-check-dark.svg")
+            checkmark.setAttribute("src", "/images/icon-check-dark.svg")
         })
     } else {
-        switchBtn.setAttribute("src", "../images/icon-moon.svg")
+        switchBtn.setAttribute("src", "/images/icon-moon.svg")
         bodyElem.removeAttribute("theme")
         checkmarks.forEach(checkmark => {
-            checkmark.setAttribute("src", "../images/icon-check.svg")
+            checkmark.setAttribute("src", "/images/icon-check.svg")
         })
     }
 }
